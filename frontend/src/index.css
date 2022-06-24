@@ -38,3 +38,7 @@ main {
 .rating span {
   color: #ffaf10;
 }
+
+.img-large {
+  max-width: 100%;
+}
