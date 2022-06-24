@@ -1,5 +1,5 @@
 import Rating from '../components/Rating';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import React, { useContext, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Col from 'react-bootstrap/esm/Col';
@@ -28,6 +28,7 @@ const reducer = (state, action) => {
 };
 
 function ProductScreen() {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -62,6 +63,7 @@ function ProductScreen() {
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity },
     });
+    navigate('/cart');
   };
 
   return loading ? (
@@ -101,37 +103,40 @@ function ProductScreen() {
           </ListGroup>
         </Col>
         <Col md={3}>
-          <Card.Body>
-            <ListGroup variant="flush">
-              <ListGroup.Item>
-                <Row>
-                  <Col>Price:</Col>
-                  <Col>${product.price}</Col>
-                </Row>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Row>
-                  <Col>Status:</Col>
-                  <Col>
-                    {product.countInStock > 0 ? (
-                      <Badge bg="success">In Stock</Badge>
-                    ) : (
-                      <Badge bg="danger">Unavailable</Badge>
-                    )}
-                  </Col>
-                </Row>
-              </ListGroup.Item>
-              {product.countInStock > 0 && (
+          <Card>
+            <Card.Body>
+              <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <div className="d-grid">
-                    <Button onClick={addToCartHandler} variant="primary">
-                      Add to Cart
-                    </Button>
-                  </div>
+                  <Row>
+                    <Col>Price:</Col>
+                    <Col>${product.price}</Col>
+                  </Row>
                 </ListGroup.Item>
-              )}
-            </ListGroup>
-          </Card.Body>
+                <ListGroup.Item>
+                  <Row>
+                    <Col>Status:</Col>
+                    <Col>
+                      {product.countInStock > 0 ? (
+                        <Badge bg="success">In Stock</Badge>
+                      ) : (
+                        <Badge bg="danger">Unavailable</Badge>
+                      )}
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+
+                {product.countInStock > 0 && (
+                  <ListGroup.Item>
+                    <div className="d-grid">
+                      <Button onClick={addToCartHandler} variant="primary">
+                        Add to Cart
+                      </Button>
+                    </div>
+                  </ListGroup.Item>
+                )}
+              </ListGroup>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </div>
