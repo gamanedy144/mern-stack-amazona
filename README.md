@@ -82,3 +82,9 @@ Mern Stack eCommerce application
     1. create sign in form
     2. add email and password
     3. add signin button
+19. Connect to MongoDB database
+    1. create atlas mongodb database
+    2. install local mongodb database
+    3. `npm install mongoose`
+    4. `npm install dotenv` to read .env file
+    5. connect to mongodb database
