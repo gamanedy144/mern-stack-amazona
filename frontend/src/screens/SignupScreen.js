@@ -52,7 +52,7 @@ export default function SignupScreen() {
       </Helmet>
       <h1 className="my-3">Sign Up</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controllId="name">
+        <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -60,7 +60,7 @@ export default function SignupScreen() {
             onChange={(e) => setName(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controllId="email">
+        <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
@@ -68,7 +68,7 @@ export default function SignupScreen() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controllId="password">
+        <Form.Group className="mb-3" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
@@ -76,7 +76,7 @@ export default function SignupScreen() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controllId="confirmPassword">
+        <Form.Group className="mb-3" controlId="confirmPassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             type="password"
