@@ -24,7 +24,7 @@ const orderSchema = new mongoose.Schema(
       country: { type: String, required: true },
     },
     paymentMethod: { type: String, required: true },
-    paymentResults: {
+    paymentResult: {
       id: String,
       status: String,
       update_time: String,
