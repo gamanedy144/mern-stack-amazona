@@ -1,6 +1,7 @@
 # MERN STACK AMAZONA
 
 Mern Stack eCommerce application
+Can be accessed at https://mern-amazona-gamanedy144.herokuapp.com/
 
 #Lessons
 
@@ -155,3 +156,6 @@ Mern Stack eCommerce application
     5. Create mongodb atlas database
     6. Set database connection in heroku env variables
     7. Commit and push
+34. Add Sidebar and Search Box
+    1. add sidebar
+    2. add search box
