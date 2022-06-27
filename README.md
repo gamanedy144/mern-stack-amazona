@@ -147,3 +147,11 @@ Mern Stack eCommerce application
     2. show user information
     3. create user update api
     4. update user info
+33. Publish to Heroku
+    1. create and config node project
+    2. serve build folder in frontend folder
+    3. Create hreoku account
+    4. Connect it to Github
+    5. Create mongodb atlas database
+    6. Set database connection in heroku env variables
+    7. Commit and push
