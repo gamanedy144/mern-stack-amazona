@@ -163,3 +163,7 @@ Can be accessed at https://mern-amazona-gamanedy144.herokuapp.com/
     1. show filters
     2. create api for searching products
     3. display results
+36. Create Admin Menu
+    1. define protected route component
+    2. define admin route component
+    3. add menu for admin in header
