@@ -2,6 +2,7 @@
 
 Mern Stack eCommerce application
 Can be accessed at https://mern-amazona-gamanedy144.herokuapp.com/
+Access http://localhost:5000/api/seed to seed products
 
 #Lessons
 
